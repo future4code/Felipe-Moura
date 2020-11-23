@@ -37,6 +37,9 @@ img {
 div img {
   background: black;
 }
+.icone {
+  background: none;
+}
 
 .botao-amarelo {
   background-color: #ffaf43;
