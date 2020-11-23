@@ -132,3 +132,10 @@ td button {
 #back-button:hover {
   background-color: #635a3d;
 }
+.btn-comprar:hover {
+  background-color: #ffaf43;
+  transition: 0.5ms;
+}
+.btn-comprar:active {
+  color: white;
+}
