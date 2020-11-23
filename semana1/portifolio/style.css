@@ -1,0 +1,84 @@
+body {
+  background: #f4f6ff;
+  margin: 0;
+  padding: 0;
+
+  font-family: "Lato", sans-serif;
+  color: #127681;
+}
+
+.conteudo {
+  margin: 0em auto;
+  padding: 1em;
+  text-align: center;
+}
+.navegacao {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.navegacao h1 {
+  margin: 0 2em;
+  font-family: "Indie Flower", cursive;
+  color: #127681;
+  font-weight: bold;
+}
+
+.navegacao ul li {
+  display: inline;
+  text-transform: uppercase;
+  padding: 1em;
+  margin: 0 2em;
+
+  letter-spacing: 0.06em;
+  color: #127681;
+  font-weight: bold;
+}
+.navegacao ul li:hover {
+  color: #127681;
+  border-bottom: 1px solid #f3c623;
+  cursor: pointer;
+}
+.conteudo p {
+  font-size: 1.5em;
+  color: #127681;
+}
+.sobre-mim {
+  border: 1px solid red;
+  text-align: center;
+}
+
+.subtitulo {
+  text-transform: uppercase;
+  text-align: center;
+}
+.sobre-mim-conteudo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.sobre-mim-conteudo img {
+  margin: 0 2em;
+  width: 200px;
+
+  box-shadow: -0.5em -0.5em #127681;
+}
+
+.sobre-mim-conteudo-texto {
+  letter-spacing: 0.25em;
+  text-align: left;
+  line-height: 2em;
+}
+.sobre-mim button {
+  background-color: none;
+}
+.sobre-mim button a {
+  border: 1px solid red;
+}
+
+.sobre-mim button a:hover {
+  color: #f3c623;
+  border: 1px solid #f3c623;
+  color: #f3c623;
+  font-weight: bold;
+}
