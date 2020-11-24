@@ -1,55 +1,55 @@
 /* Etapa 1 */
 #pond {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-end; /* para começar no lado direto(end) */
 }
 /* Etapa 2 */
 #pond {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Para alinhar os elementos */
 }
 /* Etapa 3 */
 #pond {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-around; /* Para colocar uma espaçamento envolta os elementos */
 }
 /* Etapa 4*/
 #pond {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between;  /* Para colocar um espaçamento entre os elementos */
 }
 /* Etapa 5*/
 #pond {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-end; /* Alinhamento dos itens no rodapé */
 }
 /* Etapa 6 */
 #pond {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* Colocar os elementos no centro */
+  align-items: center; /* Centralização do elemento na horizontal começando pelo fim */
 }
 /* Etapa 7 */
 #pond {
   display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
+  justify-content: space-around;  /* Para colocar uma espaçamento envolta os elementos */
+  align-items: flex-end; /* Centralização do elemento na horizontal começando pelo fim */
 }
 /* Etapa 8 */
 #pond {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row-reverse; /* Inverte o inicio da linha */
 }
 /* Etapa 9 */
 #pond {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Muda a orientação de linha para coluna */
 }
 /* Etapa 10 */
 #pond {
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
+  flex-direction: row-reverse; /* Muda o inicio dos elementos */
+  justify-content: flex-end; /* Os elementos se alinha no ultimo para o primeiro */
 }
 /* Etapa 11 */
 #pond {

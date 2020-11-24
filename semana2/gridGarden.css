@@ -1,0 +1,87 @@
+/* Etapa 1 */
+#water {
+  grid-column-start: 3; /* Move o elemento para 3 coluna */
+}
+/* Etapa 2 */
+#poison {
+  grid-column-start: 5; /* Move o elemento para a 5 coluna */
+}
+/* Etapa 3 */
+#water {
+  grid-column-start: 1;
+  grid-column-end: 4; /* Move o elemento até a o inicio da 4 coluna */
+}
+
+/* Etapa 4 */
+#water {
+  grid-column-start: 5;
+  grid-column-end: 2; /* Move o elemento até o inicio da 2coluna */
+}
+/* Etapa 5 */
+#water {
+  grid-column-start: 5;
+  grid-column-end: -2; /* Também funciona com números negativos */
+}
+/* Etapa 6 */
+#poison {
+  grid-column-start: 4; /* O elemento vai se iniciar na 4 coluna */
+}
+/* Etapa 7 */
+#water {
+  grid-column-start: 2;
+  grid-column-end: span 2;
+}
+/* Etapa 8 */
+#water {
+  grid-column-start: 1;
+  grid-column-end: span 5;
+}
+/* Etapa 9 */
+#water {
+  grid-column-start: 3;
+  grid-column-end: 6;
+}
+/* Etapa 10 */
+#water {
+  grid-column: 4/6; /* Shorhand para grid-column-start/end */
+}
+/* Etapa 11 */
+#water {
+  grid-column: 2/5;
+}
+/* Etapa 12 */
+#water {
+  grid-row-start: 3;
+}
+/* Etapa 13 */
+#water {
+  grid-row: 3/6; /* Shorthand para grid-row-start/end */
+}
+/* Etapa 14 */
+#water {
+  grid-column: 2;
+  grid-row: 5;
+}
+
+/* Etapa 15 */
+#water {
+  grid-column: 2/6;
+  grid-row: 1/6;
+}
+
+/* Etapa 16 */
+#water {
+  grid-area: 1/2/4/6;
+}
+/* Etapa 17 */
+#water {
+  grid-area: 2/3/5/6;
+}
+/* Etapa 18 */
+#poison {
+  order: 1;
+}
+/* Etapa 19 */
+#poison {
+  order: -1;
+}
