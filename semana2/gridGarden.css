@@ -85,3 +85,39 @@
 #poison {
   order: -1;
 }
+/* Etapa 20 */
+#garden {
+  grid-template-columns: 50%;
+}
+/* Etapa 21 */
+#garden {
+  grid-template-columns: 12.5%;
+}
+/* Etapa 22 */
+#garden {
+  grid-template-columns: 100px 3em 40%;
+}
+/* Etapa 23 */
+#garden {
+  grid-template-columns: 1fr 5fr;
+}
+/* Etapa 24 */
+#garden {
+  grid-template-columns: 50px 1fr 1fr 1fr 50px;
+}
+/* etaba 25 */
+#garden{
+  grid-template-columns: 75px 1.5fr 1fr;
+}
+/* Etapa 26 */
+#garden{
+  grid-template-rows: 20px 10px 10px 10px 1fr;
+}
+/* Etapa 27 */
+#garden{
+  grid-template: 60% 200px;
+}
+/* Etapa 28 */
+#garden{
+  grid-template: 1fr 50px / 20% 80%;
+}
