@@ -1,0 +1,102 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+div {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+#first-block {
+  background-color: red;
+  width: 100vw;
+  height: 15vh;
+}
+
+.blue-block {
+  background-color: blue;
+  width: 33vw;
+  height: 15vh;
+  margin-top: 1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.yellow-block {
+  background-color: yellow;
+  width: 33vw;
+  height: 15vh;
+  margin-top: 1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.green-block {
+  background-color: green;
+  width: 33vw;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1vw;
+}
+
+.black-block {
+  background-color: black;
+  color: white;
+  width: 49vw;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  margin-top: 1.70vh;
+  align-items: center;
+}
+
+.white-block {
+  background-color: white;
+  width: 33vw;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  margin-top: 1vw;
+  align-items: center;
+}
+
+@media screen and (min-device-width: 421px) and (max-device-width: 800px) {
+  div {
+    justify-content: space-around;
+  }
+  .blue-block,
+  .yellow-block,
+  #item-9,
+  #item-10 {
+    width: 49vw;
+  }
+  .green-block,
+  #item-11 {
+    width: 100vw;
+  }
+}
+@media screen and (min-device-width: 320px) and (max-device-width: 420px) {
+  .blue-block,
+  .yellow-block,
+  .green-block,
+  .blue-block,
+  #item-7,
+  #item-8,
+  #item-9,
+  #item-10,
+  #item-11 {
+    width: 100vw;
+  }
+}
