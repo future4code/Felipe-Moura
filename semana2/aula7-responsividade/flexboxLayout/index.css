@@ -23,9 +23,9 @@ div {
 
 .blue-block {
   background-color: blue;
-  width: 33vw;
-  height: 15vh;
-  margin-top: 1vw;
+  width: 30vw;
+  height: 13vh;
+  margin: 1vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,9 +33,9 @@ div {
 
 .yellow-block {
   background-color: yellow;
-  width: 33vw;
-  height: 15vh;
-  margin-top: 1vw;
+  width: 30vw;
+  height: 13vh;
+  margin: 1vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,22 +43,22 @@ div {
 
 .green-block {
   background-color: green;
-  width: 33vw;
-  height: 15vh;
+  width: 30vw;
+  height: 13vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 1vw;
+  margin: 1vw;
 }
 
 .black-block {
   background-color: black;
   color: white;
-  width: 49vw;
+  width: 48vw;
   height: 30vh;
   display: flex;
   justify-content: center;
-  margin-top: 1.70vh;
+  margin: 1.7vh;
   align-items: center;
 }
 
