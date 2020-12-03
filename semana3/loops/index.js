@@ -43,7 +43,9 @@ for(let i = 0; i < arrayOriginal.length; i++){
 }
   console.log(arrayDeStrings)
  */
-console.log('Respsta do item E')
+
+//E
+/* console.log('Respsta do item E')
 
 let maior = 0
 let menor = 0
@@ -57,4 +59,17 @@ for(let i = 0; i < arrayOriginal.length; i++){
   }
  
 }
-console.log(`O maior número é ${maior} e o menor é ${menor}`)
+console.log(`O maior número é ${maior} e o menor é ${menor}`) */
+
+/* Desafio 01 */
+// Será exibido uma sequencia de 4 linhas cada uma quantidade a mais de zero
+
+/* Desafio 02 */
+console.log('vamos jogar');
+let numeroPensado = 15
+let numeroChute = Number(prompt('Chute um número:'))
+let numerosChutados = []
+
+while(numeroChute > numeroPensado){
+  console.log()
+}
