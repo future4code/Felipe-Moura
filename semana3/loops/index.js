@@ -65,11 +65,43 @@ console.log(`O maior número é ${maior} e o menor é ${menor}`) */
 // Será exibido uma sequencia de 4 linhas cada uma quantidade a mais de zero
 
 /* Desafio 02 */
-console.log('vamos jogar');
+/* console.log('vamos jogar');
 let numeroPensado = 15
-let numeroChute = Number(prompt('Chute um número:'))
-let numerosChutados = []
+let errou = true
+let quantidadeChutes = []
 
-while(numeroChute > numeroPensado){
-  console.log()
+while(errou){
+  let chute = Number(prompt('Chute um número'))
+  if(chute > numeroPensado){
+    console.log(`Errou você chutou ${chute} e o numero pensado é menor`)
+    quantidadeChutes.push(chute)
+  }else if(chute < numeroPensado){
+    console.log(`Errou você chutou ${chute} e o numero pensado é maior`)
+    quantidadeChutes.push(chute)
+  }else{
+    errou = false
+    console.log(`Você acertou o numero pensando foi: ${numeroPensado}`)
+    console.log(`Você chutou ${quantidadeChutes.length} vezes até acertar`)
+  }
+} */
+//Desafio 03
+console.log('vamos jogar');
+let numeroPensado = Math.floor(Math.random() * 10)
+console.log(numeroPensado)
+let errou = true
+let quantidadeChutes = []
+
+while(errou){
+  let chute = Number(prompt('Chute um número'))
+  if(chute > numeroPensado){
+    console.log(`Errou você chutou ${chute} e o numero pensado é menor`)
+    quantidadeChutes.push(chute)
+  }else if(chute < numeroPensado){
+    console.log(`Errou você chutou ${chute} e o numero pensado é maior`)
+    quantidadeChutes.push(chute)
+  }else{
+    errou = false
+    console.log(`Você acertou o numero pensando foi: ${numeroPensado}`)
+    console.log(`Você chutou ${quantidadeChutes.length} vezes até acertar`)
+  }
 }
