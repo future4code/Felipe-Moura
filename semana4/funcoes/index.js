@@ -65,3 +65,42 @@ escreveSobreMim() */
 
 // }
 // console.log(repeteMensagem('Ola Labenu'))
+
+//Exercício 6
+const numeros = [10, 23,45,78,90,52,35,67,84,22]
+// let tamanhoArray = function(array){
+//   return array.length
+// }
+// console.log(tamanhoArray(numeros))
+
+let numeroPar = (numero) =>{
+  if(numero % 2 === 0){
+   return true
+  }
+}
+
+ console.log(numeroPar(10))
+
+// function verificaNumerosPares(array){
+//   let quantidadeNumerosPares = []
+//   for(let i = 0; i <= array.length; i++){
+//     if(array[i] % 2 === 0){
+      
+//       quantidadeNumerosPares.push(array[i])
+//     }
+//   }
+//    return quantidadeNumerosPares.length
+// }
+// console.log(verificaNumerosPares(numeros))
+
+
+function verificaNumerosPares(array){
+  let quantidadeNumerosPares = []
+  for(let i = 0; i <= array.length; i++){
+    if(numeroPar(array[i]) === true)
+    quantidadeNumerosPares.push(array[i])
+
+  }
+   return quantidadeNumerosPares.length
+}
+console.log(verificaNumerosPares(numeros))
