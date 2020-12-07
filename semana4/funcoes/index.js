@@ -8,6 +8,9 @@
 //A) No console vai ser somente dois elementos do array
 //B) Seria impresso somente os dois nomes
 
+//Exercicio 3
+/* A função metodo recebe um array de números como parâmetro, verifica se os números desses array são pares em casos deles serem pares irá realizar a multiplicação do número por ele mesmo e enviar uma novo array. Um novo nome poderia ser: "potenciaDeNumerosPares".
+*/
 
 
 
