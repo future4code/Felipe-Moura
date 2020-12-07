@@ -25,21 +25,43 @@
 
 escreveSobreMim() */
 
-function sobreMim(nome, idade, endereco, simOuNao){
+// function sobreMim(nome, idade, endereco, simOuNao){
   
-  return console.log(`Eu sou o ${nome}, tenho ${idade}, moro em ${endereco} e ${simOuNao} estudante`)
-}
+//   return console.log(`Eu sou o ${nome}, tenho ${idade}, moro em ${endereco} e ${simOuNao} estudante`)
+// }
 
-let nome = prompt('Digite o seu nome');
-let idade = Number(prompt('Quantos anos você possui?'))
-let endereco = prompt('Qual o seu endereço?')
-let estudante = prompt("Você é estudante?, Responda Sim ou Não").toLowerCase()
-let simOuNao = ""
-console.log(estudante)
-if(estudante === 'sim'){
-  simOuNao = 'sou'
-} else{
-  simOuNao = 'não sou'
-}
+// let nome = prompt('Digite o seu nome');
+// let idade = Number(prompt('Quantos anos você possui?'))
+// let endereco = prompt('Qual o seu endereço?')
+// let estudante = prompt("Você é estudante?, Responda Sim ou Não").toLowerCase()
+// let simOuNao = ""
+// console.log(estudante)
+// if(estudante === 'sim'){
+//   simOuNao = 'sou'
+// } else{
+//   simOuNao = 'não sou'
+// }
 
-sobreMim(nome, idade, endereco, simOuNao)
+// sobreMim(nome, idade, endereco, simOuNao)
+
+//Exercicio 5
+//Item A
+// function somaDoisNumeros(num1, num2){
+//   return num1 + num2
+// }
+// console.log(somaDoisNumeros(10,12))
+// //Item B
+// function verificaNumeroMaior(num1, num2){
+//   return num1 >= num2
+// }
+// console.log(verificaNumeroMaior(5, 6))
+
+// //Item C
+
+// function repeteMensagem(mensagem){
+//   for(let i = 0; i < 10; i++){
+//     console.log(mensagem)
+//   }
+
+// }
+// console.log(repeteMensagem('Ola Labenu'))
