@@ -11,3 +11,18 @@
  * 
  */
 
+ let carta = comprarCarta()
+ let cartaUsuarios = []
+ let cartaComputador = []
+ if(cartaUsuarios === 'A'){
+    carta = comprarCarta()
+ }else{
+    cartaUsuarios.push(carta)
+ }
+ console.log(cartaUsuarios)
+ cartaComputador.push(carta)
+ carta = comprarCarta()
+ cartaUsuarios.push(carta)
+ cartaComputador.push(carta)
+
+

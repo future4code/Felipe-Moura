@@ -45,9 +45,6 @@ if(confirm('Quer comprar uma nova carta')){
       console.log('Computador Ganhou')
    }
  
-  
-  
- 
 }else{
    console.log(`O jogo acabou`)
 }
