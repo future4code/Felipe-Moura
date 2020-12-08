@@ -3,7 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body {
+  background-color: #ecf4f3;
+  color: #00a671;
+}
 header {
   height: 10vh;
   display: flex;
@@ -21,12 +24,18 @@ section {
   border: 1px dotted rgb(53, 53, 53);
   width: 14%;
   padding: 5px;
+
+  background-color: #ecf4f3;
 }
 .to-do {
   cursor: pointer;
 }
 ul li {
   list-style: none;
+}
+
+.risked-item {
+  text-decoration: line-through;
 }
 
 @media screen and (min-device-width: 320px) and (max-device-width: 420px) {
