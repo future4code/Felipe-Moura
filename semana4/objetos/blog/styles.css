@@ -48,7 +48,7 @@ button {
   border-top: 3px double rgb(77, 77, 77);
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: top;
   flex-wrap: wrap;
 }
 .novo-post {
