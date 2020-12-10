@@ -9,6 +9,13 @@ function imprimirDespesas(despesas){
     divDespesas.innerHTML = '<p><u>Despesas Detalhadas</u></p>'
 
     // AQUI VEM A IMPLEMENTAÇÃO
+
+   despesas.forEach((despesa) => {
+       divDespesas.innerHTML += `valor: R$${despesa.valor} | tipo: ${despesa.tipo} | descrição: ${despesa.descricao}<br>`
+   })
+
+
+    
 }
 
 
@@ -19,9 +26,21 @@ function imprimirExtrato(){
     let gastoAlimentacao = 0
     let gastoUtilidades = 0
     let gastoViagem = 0
-
-
+    
     // AQUI VEM A IMPLEMENTAÇÃO
+    arrDespesas.filter((gastos) => {
+        console.log(gastos)
+        if(gastos.tipo === "alimentação"){
+            gastoAlimentacao += gastos.valor
+        }
+        if(gastos.tipo === "utilidades"){
+            gastoUtilidades += gastos.valor
+        }
+        if(gastos.tipo === "viagem"){
+            gastoViagem += gastos.valor
+        }
+        gastoTotal += gastos.valor
+    })
 
     divExtrato.innerHTML = `<p>Extrato: Gasto Total: R$${gastoTotal} | Alimentação: R$${gastoAlimentacao} | 
                                         Utilidades: R$${gastoUtilidades} | Viagem: R$${gastoViagem}</p>`
@@ -76,10 +95,6 @@ function filtrarDespesas(){
 
     imprimirDespesas(despesasFiltradas)
 }
-
-
-
-
 
 
 
