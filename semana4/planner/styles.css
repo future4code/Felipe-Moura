@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #ecf4f3;
+  color: #00a671;
+}
+header {
+  height: 10vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+section {
+  display: flex;
+  justify-content: space-evenly;
+  height: 90vh;
+}
+
+.semana {
+  border: 1px dotted rgb(53, 53, 53);
+  width: 14%;
+  padding: 5px;
+
+  background-color: #ecf4f3;
+}
+.to-do {
+  cursor: pointer;
+}
+ul li {
+  list-style: none;
+}
+
+.risked-item {
+  text-decoration: line-through;
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 420px) {
+  header {
+    max-width: 370px;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  label {
+    margin: 2px;
+  }
+  #tarefa {
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+  #dias-semana {
+    padding: 5px;
+  }
+  button {
+    height: 60px;
+  }
+  section {
+    margin-top: 5vh;
+    display: block;
+  }
+  .semana {
+    width: 80%;
+    height: 75%;
+    margin: 10px auto;
+    text-align: center;
+  }
+}
