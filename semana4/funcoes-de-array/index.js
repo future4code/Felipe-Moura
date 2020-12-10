@@ -29,17 +29,36 @@ function imprimirExtrato(){
     let gastoViagem = 0
     
     // AQUI VEM A IMPLEMENTAÇÃO
-    arrDespesas.map((gastos) => {
-        if(gastos.tipo === "alimentação"){
-            gastoAlimentacao += gastos.valor
+    // arrDespesas.map((gastos) => {
+      
+    //     if(gastos.tipo === "alimentação"){
+    //         gastoAlimentacao += gastos.valor
+    //     }
+    //     if(gastos.tipo === "utilidades"){
+    //         gastoUtilidades += gastos.valor
+    //     }
+    //     if(gastos.tipo === "viagem"){
+    //         gastoViagem += gastos.valor
+    //     }
+    //     gastoTotal += gastos.valor
+    // })
+
+    arrDespesas.forEach((despesa) =>{
+        switch(despesa.tipo){
+            case 'alimentação':
+                gastoAlimentacao += despesa.valor
+                gastoTotal +=gastoAlimentacao
+            break
+            case 'utilidades':
+                gastoUtilidades += despesa.valor
+                gastoTotal +=gastoUtilidades
+            break
+            case 'viagem':
+                gastoViagem += despesa.valor
+                gastoTotal += gastoViagem
+            break
+     
         }
-        if(gastos.tipo === "utilidades"){
-            gastoUtilidades += gastos.valor
-        }
-        if(gastos.tipo === "viagem"){
-            gastoViagem += gastos.valor
-        }
-        gastoTotal += gastos.valor
     })
 
     divExtrato.innerHTML = `<p>Extrato: Gasto Total: R$${gastoTotal} | Alimentação: R$${gastoAlimentacao} | 
@@ -98,7 +117,7 @@ function filtrarDespesas(){
             return true
         }
     })// AQUI NESSA VARIÁVEL VEM A IMPLEMENTAÇÃO
-    console.log(despesasFiltradas)
+ 
     imprimirDespesas(despesasFiltradas)
 
 
