@@ -14,3 +14,10 @@
   No console será exibito R$ 165,00 para o investimenmto em ações
   No segundo montante será exibido o alerta de 'Tipo de investimento informado incorreto' pois o investimento em tesouro direto não está disponível
 */
+
+/* 3)
+  Verifica cada um dos números do array numeros caso esse numero for par ele enviar para o array1 e caso for impar ele envia para o array2
+  No console será exibido Quantidade total de números 14,
+  Será exibido 6
+  Sera exibido 8
+*/
