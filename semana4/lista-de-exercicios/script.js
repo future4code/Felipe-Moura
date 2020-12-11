@@ -119,8 +119,24 @@ console.log(verificaTriangulo(3,3,3)) */
 
 
 //Exercício 2
-const helloWord = () =>{
-  alert('Hello Labenu')
-}
+// const helloWord = () =>{
+//   alert('Hello Labenu')
+// }
 
-helloWord()
+// helloWord()
+
+//Exercícios de Objetos
+//1) Array são listas que utulizamos para guardar valores nós quais a ordem não importam muito
+//Objetos são listas onde todo elemento possui uma chave e um valor das quais podemos acessa-las posteriormemte
+
+/* 2 */
+// const criaRetangulo = (lado1, lado2) =>{
+//   return{
+//     largura: lado1,
+//     altura: lado2,
+//     perimetro: 2 * (lado1 + lado2),
+//     area: lado1 * lado2
+//   }
+// }
+
+// console.log(criaRetangulo(2,5))
