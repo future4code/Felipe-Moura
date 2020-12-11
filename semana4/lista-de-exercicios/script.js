@@ -53,3 +53,17 @@ while(i < quantidadeDeNumerosPares) {
 mesmo atribuindo o o valor a costante o programa entrará em loop infinito. Para corrigir esse problema devemos incrementar o valor de i toda vez.
 Na condição do while também temos que tirar o <= deixando somente o <.
 */
+
+//Exércio 4
+
+function verificaTriangulo(ladoA, ladoB, ladoC){
+ if(ladoA === ladoB && ladoB === ladoC && ladoA === ladoC){
+   console.log('Tringulo Equilatero')
+ }else if(ladoA === ladoB || ladoB === ladoC || ladoA === ladoC){
+   console.log('Tringulo Isósceles')
+ }else{
+   console.log('trigulo escaleno')
+ }
+}
+
+console.log(verificaTriangulo(3,3,3))
