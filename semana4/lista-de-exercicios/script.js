@@ -28,3 +28,9 @@
   No console será exibido 1590
 
 */
+
+//Exercicios de Lógicas de Programação
+/* 1) 1º) while
+  2º) for
+  3º) for of
+*/
