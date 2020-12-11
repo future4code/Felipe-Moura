@@ -39,7 +39,17 @@ b)false
 c)true
 d)true
 e)true
+*/
 
+// 3)
+/* const quantidadeDeNumerosPares = 5
+let i = 0
+while(i < quantidadeDeNumerosPares) {
+  console.log(i * 2)
+  i++
+} */
 
-
+/* O código não funciona pois uma constante não pode iniciar sem uma atribuição de valor,
+mesmo atribuindo o o valor a costante o programa entrará em loop infinito. Para corrigir esse problema devemos incrementar o valor de i toda vez.
+Na condição do while também temos que tirar o <= deixando somente o <.
 */
