@@ -70,28 +70,57 @@ console.log(verificaTriangulo(3,3,3)) */
 
 // Exercicio 5
 
-function verificaMaior(num1, num2){
-  let maior 
-  let diferenca = (num1 - num2 )
-  if(num1 >= num2){
-    maior = num1
-  }else{
-    maior = num2
-  }
-  console.log(`O maior número é ${maior}`)
-  if(num1 % num2 === 0 || num2 % num1 === 0){
-    console.log(`${num1} é divisivel por ${num2}`)
-  }else{
-    console.log(`${num1} não é divisil por ${num2}`)
-  }
+// function verificaMaior(num1, num2){
+//   let maior 
+//   let diferenca = (num1 - num2 )
+//   if(num1 >= num2){
+//     maior = num1
+//   }else{
+//     maior = num2
+//   }
+//   console.log(`O maior número é ${maior}`)
+//   if(num1 % num2 === 0 || num2 % num1 === 0){
+//     console.log(`${num1} é divisivel por ${num2}`)
+//   }else{
+//     console.log(`${num1} não é divisil por ${num2}`)
+//   }
+//   if(diferenca < 0 ){
+//     diferenca *= -1
+//   }
+//   console.log(`A difereça é de ${diferenca}`)
+// }
+// console.log(verificaMaior(30,15))
 
-  if(diferenca < 0 ){
-    diferenca *= -1
-  }
 
-  console.log(`A difereça é de ${diferenca}`)
+// exercicio de funções
+//Exercício 1
 
-  
+// let array = [10,11,12,13,14,15]
+// function valoresDoArray(array){
+//   let maior = 0
+//   let menor = 0
+//   for(let numero of array){
+//     if(numero >= maior && numero >= menor){
+//       maior = numero 
+//       menor = numero
+//     }
+    
+//     if(maior <= menor){
+//       menor = maior
+//     }
+    
+//   }
+//   console.log(maior)
+//   console.log(menor)
+// }
+
+
+// console.log(valoresDoArray(array))
+
+
+//Exercício 2
+const helloWord = () =>{
+  alert('Hello Labenu')
 }
 
-console.log(verificaMaior(30,15))
+helloWord()
