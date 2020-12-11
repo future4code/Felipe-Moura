@@ -21,3 +21,10 @@
   Será exibido 6
   Sera exibido 8
 */
+
+/* 4)
+  Vai verificar qual número é maior e qual número é menor do aray numerros
+  No console será exibido -10;
+  No console será exibido 1590
+
+*/
