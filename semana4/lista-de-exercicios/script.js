@@ -56,7 +56,7 @@ Na condição do while também temos que tirar o <= deixando somente o <.
 
 //Exércio 4
 
-function verificaTriangulo(ladoA, ladoB, ladoC){
+/* function verificaTriangulo(ladoA, ladoB, ladoC){
  if(ladoA === ladoB && ladoB === ladoC && ladoA === ladoC){
    console.log('Tringulo Equilatero')
  }else if(ladoA === ladoB || ladoB === ladoC || ladoA === ladoC){
@@ -66,4 +66,32 @@ function verificaTriangulo(ladoA, ladoB, ladoC){
  }
 }
 
-console.log(verificaTriangulo(3,3,3))
+console.log(verificaTriangulo(3,3,3)) */
+
+// Exercicio 5
+
+function verificaMaior(num1, num2){
+  let maior 
+  let diferenca = (num1 - num2 )
+  if(num1 >= num2){
+    maior = num1
+  }else{
+    maior = num2
+  }
+  console.log(`O maior número é ${maior}`)
+  if(num1 % num2 === 0 || num2 % num1 === 0){
+    console.log(`${num1} é divisivel por ${num2}`)
+  }else{
+    console.log(`${num1} não é divisil por ${num2}`)
+  }
+
+  if(diferenca < 0 ){
+    diferenca *= -1
+  }
+
+  console.log(`A difereça é de ${diferenca}`)
+
+  
+}
+
+console.log(verificaMaior(30,15))
