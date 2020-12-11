@@ -140,3 +140,11 @@ console.log(verificaTriangulo(3,3,3)) */
 // }
 
 // console.log(criaRetangulo(2,5))
+/* 3 */
+/* const filme = {
+  nome: `Star Wars Uma nova Esperança`,
+  anoLançamento: 1977,
+  diretor: `George Lucas`,
+  atores: [' Mark Hamill', 'Carrie Fisher', 'Harrison Ford' ]
+}
+console.log(`Venha assistir ${filme.nome}, de ${filme.anoLançamento}, dirigido por ${filme.diretor} e estrelado por ${filme.atores}` ) */
