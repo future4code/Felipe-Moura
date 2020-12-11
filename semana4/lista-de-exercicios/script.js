@@ -148,3 +148,24 @@ console.log(verificaTriangulo(3,3,3)) */
   atores: [' Mark Hamill', 'Carrie Fisher', 'Harrison Ford' ]
 }
 console.log(`Venha assistir ${filme.nome}, de ${filme.anoLançamento}, dirigido por ${filme.diretor} e estrelado por ${filme.atores}` ) */
+
+/* 4 */
+// const pessoa = {
+//   nome: 'Felipe',
+//   idade: 26,
+//   email: 'felipemimoura@labenu.com.br',
+//   endereco: 'Franco da Rocha '
+// }
+
+// const anomino = (pessoa) =>{
+//   return{
+//     ...pessoa,
+//     nome:'Anonino',
+//     idade: pessoa.idade,
+//     email: pessoa.email,
+//     endereco: pessoa.endereco
+//   }
+// }
+
+// console.log(pessoa)
+// console.log(anomino(pessoa))
