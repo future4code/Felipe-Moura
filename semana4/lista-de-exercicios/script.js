@@ -195,7 +195,7 @@ console.log(`Venha assistir ${filme.nome}, de ${filme.anoLançamento}, dirigido 
 // console.log(criancas)
 
 //Exercicio 2
-const array = [1,2,3,4,5,6]
+// const array = [1,2,3,4,5,6]
 //a
 // function multiplicaPorDois (array){
   
@@ -218,20 +218,48 @@ const array = [1,2,3,4,5,6]
 // }
 // multiplicaEMudaParaTexto(array, 3)
 
-let verificaParImpar = (num) =>{
-  if(num % 2 === 0){
-    return `${num} é par`
-  }else{
-    return `${num} é impar`
-  }
-}
-let arrayNovo = (array) =>{
-  let novoArray = array.map((num) =>{
-    return (verificaParImpar(num))
-  })
-  console.log(novoArray)
-  return novoArray
+// let verificaParImpar = (num) =>{
+//   if(num % 2 === 0){
+//     return `${num} é par`
+//   }else{
+//     return `${num} é impar`
+//   }
+// }
+// let arrayNovo = (array) =>{
+//   let novoArray = array.map((num) =>{
+//     return (verificaParImpar(num))
+//   })
+//   console.log(novoArray)
+//   return novoArray
   
+// }
+
+// arrayNovo(array)
+
+/* 3 */
+
+const pessoas = [
+	{ nome: "Paula", idade: 12, altura: 1.8},
+	{ nome: "João", idade: 20, altura: 1.3},
+	{ nome: "Pedro", idade: 15, altura: 1.9},
+	{ nome: "Luciano", idade: 22, altura: 1.8},
+	{ nome: "Artur", idade: 10, altura: 12},
+	{ nome: "Soter", idade: 70, altura: 1.9}
+]
+let podeEntrar = (array) =>{
+  let podemEntrar = array.filter((pessoa) =>{
+    return((pessoa.idade > 14 && pessoa.idade < 60) && (pessoa.altura >= 1.5))
+  })
+  console.log(podemEntrar)
+  return podemEntrar
+}
+let naoPodeEntrar = (array) =>{
+  let naoPodemEntrar = array.filter((pessoa) =>{
+    return((pessoa.idade < 14 || pessoa.idade > 60) || (pessoa.altura < 1.5) )
+  })
+ 
+  return naoPodemEntrar
 }
 
-arrayNovo(array)
+podeEntrar(pessoas)
+console.log(naoPodeEntrar(pessoas))
