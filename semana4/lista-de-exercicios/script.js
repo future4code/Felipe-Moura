@@ -169,3 +169,29 @@ console.log(`Venha assistir ${filme.nome}, de ${filme.anoLançamento}, dirigido 
 
 // console.log(pessoa)
 // console.log(anomino(pessoa))
+
+/* Exercicios de funções de array */
+
+//Exercicio 1
+// a)
+// console.log('Exercicios sobre funções do array')
+// const pessoas = [
+//   { nome: "Pedro", idade: 20 },
+// 	{ nome: "João", idade: 10 },
+// 	{ nome: "Paula", idade: 12 },
+// 	{ nome: "Artur", idade: 89 } 
+// ]
+// //a
+// let adultos = pessoas.filter((adulto, index, lista) =>{
+//   return adulto.idade >= 20
+// })
+// console.log(adultos)
+
+// //b
+// let criancas = pessoas.filter((crianca, index, lista) =>{
+//   return crianca.idade < 20
+// })
+
+// console.log(criancas)
+
+
