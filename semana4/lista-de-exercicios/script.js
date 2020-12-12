@@ -194,4 +194,44 @@ console.log(`Venha assistir ${filme.nome}, de ${filme.anoLançamento}, dirigido 
 
 // console.log(criancas)
 
+//Exercicio 2
+const array = [1,2,3,4,5,6]
+//a
+// function multiplicaPorDois (array){
+  
+//   let dobros = array.map((dobro, index, lista) =>{
+//     return dobro * 2
+//   })
+//   console.log(dobros)
+//   return dobros
+// }
 
+// multiplicaPorDois(array)
+
+// function multiplicaEMudaParaTexto(array, num){
+
+//     let multiplicado = array.map((resultado) =>{
+//       return (resultado * num).toString()
+//     })
+//     console.log(multiplicado)
+//     return multiplicado
+// }
+// multiplicaEMudaParaTexto(array, 3)
+
+let verificaParImpar = (num) =>{
+  if(num % 2 === 0){
+    return `${num} é par`
+  }else{
+    return `${num} é impar`
+  }
+}
+let arrayNovo = (array) =>{
+  let novoArray = array.map((num) =>{
+    return (verificaParImpar(num))
+  })
+  console.log(novoArray)
+  return novoArray
+  
+}
+
+arrayNovo(array)
