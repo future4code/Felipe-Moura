@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import CardGrande from './components/CardGrande/CardGrande';
+import CardPequeno from './components/CardPequeno/CardPequeno';
 import ImagemButton from './components/ImagemButton/ImagemButton';
 
 function App() {
@@ -9,9 +10,15 @@ function App() {
       <div className="page-section-container">
         <h2>Dados pessoais</h2>
         <CardGrande 
-          imagem="https://uploads-ssl.webflow.com/5d640f4558306be99cf47a0e/5dd57846babb597b77c6bb1d_PerfilFuture4_cor.png" 
-          nome="Astrodev" 
-          descricao="Oi, eu sou o Astrodev. Sou o chefe dos alunos da Labenu. Adoro pedir e-mails na sexta-feira e esperar os alunos responderem só para responder com uma bronca e dar mais trabalho para eles."
+          imagem="https://imgur.com/o7BqQfe.jpg" 
+          nome="Felipe Moura" 
+          descricao="Oi, sou o Felipe tenho 26 anos sou formando em Engenharia Civil pela Universidade Paulista, meu primeiro contato com programação foi atravérs na semana omnistack da Rocketseat e desde lá venho estudando cada vez mais e curtindo muito o assunto "
+        />
+        <CardPequeno 
+          cidade="Franco da Rocha"
+          estado="São Paulo"
+          tel="(11) 98765-4321"
+          email="felipemimoura@labenu.com"
         />
         
         <ImagemButton 
@@ -23,15 +30,39 @@ function App() {
       <div className="page-section-container">
         <h2>Experiências profissionais</h2>
         <CardGrande 
-          imagem="https://s3.amazonaws.com/future4.com.br/static/headf4-c492117ca2373dc85ca81bf715b3dc2a.png" 
-          nome="Labenu" 
-          descricao="Formando desenvolvedores para o mercado de trabalho!" 
+          imagem="https://imgur.com/ZGEZQU4.jpg" 
+          nome="StarCenter Soluções em Clinamatização" 
+          descricao="Analista de Planejamento com foco em negociações B2B" 
         />
         
         <CardGrande 
-          imagem="https://imagens.canaltech.com.br/empresas/4418.400.jpg" 
-          nome="NASA" 
-          descricao="Apontando defeitos." 
+          imagem="https://imgur.com/QZmde2N.jpg" 
+          nome="Construtora Ohana" 
+          descricao="Coordenador de Planejamento com foco no cliente interno." 
+        />
+        <CardGrande 
+          imagem="https://imgur.com/zew5VYl.png" 
+          nome="CompactCar" 
+          descricao="Assistente de Planejamento." 
+        />
+      </div>
+      <div className="page-section-container">
+        <h2>Formações</h2>
+        <CardGrande 
+          imagem="https://imgur.com/vL6UXY5.png" 
+          nome="Labenu" 
+          descricao="Desenvolvedor FullStack" 
+        />
+        
+        <CardGrande 
+          imagem="https://imgur.com/zvxBbU2.png" 
+          nome="Formação FrontEnd Alura" 
+          descricao="Formação Básica sobre FrontEnd." 
+        />
+        <CardGrande 
+          imagem="https://imgur.com/VzcWfMx.jpg" 
+          nome="IGTI" 
+          descricao="Desenvolvimento FullStack." 
         />
       </div>
 
@@ -40,6 +71,7 @@ function App() {
         <ImagemButton 
           imagem="https://d2v9ipibika81v.cloudfront.net/uploads/sites/261/2017/01/facebook-logo-3.png" 
           texto="Facebook" 
+         
         />        
 
         <ImagemButton 
