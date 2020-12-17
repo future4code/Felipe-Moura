@@ -1,7 +1,26 @@
 import React from 'react';
+import styled from 'styled-components'
+
 import './App.css';
 import Post from './components/Post/Post';
 
+const InputsPersonalizados = styled.input`
+  margin: 10px;
+  padding: 5px;
+  border-radius: 20px;
+  border: 1px solid #aaa;
+  outline: none;
+  width: 300px;
+`
+const BotaoPostagem = styled.button`
+  width: 100px;
+  border: none;
+  padding: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #eee
+
+`
 class App extends React.Component {
   state = {
     informacoesPost:[
@@ -37,18 +56,18 @@ class App extends React.Component {
 
     this.setState({informacoesPost: novoPost})
   }
+
   onChangeValorInputNome = (event) =>{
-    this.setState({valorInputNome: event.target.value})
+    this.setState({valorInputNome: event.target.value}) 
   }
+
   onChangeValorInputFotoUsuario= (event)=>{
     this.setState({valorInputFotoUsuario: event.target.value})
   }
+
   onChangeValorInputLink = (event)=>{
     this.setState({valorInputLink: event.target.value})
   }
-
-  
-  
   
   render() {
     const listaDePost = this.state.informacoesPost.map((postagem) =>{
@@ -65,22 +84,24 @@ class App extends React.Component {
     
     return (
       <div className={'app-container'}>
-        <input
-          onChange={this.onChangeValorInputNome}
-          value={this.state.valorInputNome}
-          placeholder={"Nome Usuario"}
-        />
-        <input
-         onChange={this.onChangeValorInputFotoUsuario}
-          value={this.state.valorInputFotoUsuario}
-          placeholder={"Foto Perfil Usuario"}
-        />
-        <input
-         onChange={this.onChangeValorInputLink}
-          value={this.state.valorInputLink}
-          placeholder={"Endereço da postagem"}
-        />
-        <button onClick={this.adicionaPostagem}>Postar</button>
+        <div>
+          <InputsPersonalizados
+            onChange={this.onChangeValorInputNome}
+            value={this.state.valorInputNome}
+            placeholder={"Nome Usuario"}
+          ></InputsPersonalizados>
+          <InputsPersonalizados
+          onChange={this.onChangeValorInputFotoUsuario}
+            value={this.state.valorInputFotoUsuario}
+            placeholder={"Foto Perfil Usuario"}
+          ></InputsPersonalizados>
+          <InputsPersonalizados
+          onChange={this.onChangeValorInputLink}
+            value={this.state.valorInputLink}
+            placeholder={"Endereço da postagem"}
+          ></InputsPersonalizados>
+          <BotaoPostagem onClick={this.adicionaPostagem}>Postar</BotaoPostagem>
+        </div>
         {listaDePost}
       </div>
     );
