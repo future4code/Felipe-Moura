@@ -20,8 +20,32 @@ class App extends React.Component {
         fotoUsuario: "https://picsum.photos/55/50",
         fotoPost: "https://picsum.photos/240/150"
       },
-    ]
+    ],
+    valorInputNome: "",
+    valorInputFotoUsuario: "",
+    valorInputLink: "",
   } 
+
+  adicionaPostagem  = () => {
+    const novaPostagem = {
+      nomeUsuario: this.state.valorInputNome,
+      fotoUsuario: this.state.valorInputFotoUsuario,
+      fotoPost: this.state.valorInputLink
+    }
+
+    const novoPost = [novaPostagem, ...this.state.informacoesPost]
+
+    this.setState({informacoesPost: novoPost})
+  }
+  onChangeValorInputNome = (event) =>{
+    this.setState({valorInputNome: event.target.value})
+  }
+  onChangeValorInputFotoUsuario= (event)=>{
+    this.setState({valorInputFotoUsuario: event.target.value})
+  }
+  onChangeValorInputLink = (event)=>{
+    this.setState({valorInputLink: event.target.value})
+  }
 
   
   
@@ -33,13 +57,28 @@ class App extends React.Component {
         nomeUsuario = {postagem.nomeUsuario}
         fotoUsuario = {postagem.fotoUsuario}
         fotoPost = {postagem.fotoPost}
-        
         />
       )
     })
     
     return (
       <div className={'app-container'}>
+        <input
+          onChange={this.onChangeValorInputNome}
+          value={this.state.valorInputNome}
+          placeholder={"Nome Usuario"}
+        />
+        <input
+         onChange={this.onChangeValorInputFotoUsuario}
+          value={this.state.valorInputFotoUsuario}
+          placeholder={"Foto Perfil Usuario"}
+        />
+        <input
+         onChange={this.onChangeValorInputLink}
+          value={this.state.valorInputLink}
+          placeholder={"Endereço da postagem"}
+        />
+        <button onClick={this.adicionaPostagem}>Postar</button>
         {listaDePost}
       </div>
     );
