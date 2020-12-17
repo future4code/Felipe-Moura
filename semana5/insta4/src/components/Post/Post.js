@@ -13,7 +13,7 @@ class Post extends React.Component {
     curtido: false,
     numeroCurtidas: 0,
     comentando: false,
-    numeroComentarios: 0
+    numeroComentarios: 0,
   }
 
   onClickCurtida = () => {
@@ -37,11 +37,10 @@ class Post extends React.Component {
       comentando: !this.state.comentando,
     })
   }
-
   aoEnviarComentario = () => {
     this.setState({
       comentando: false,
-      numeroComentarios: this.state.numeroComentarios + 1
+      numeroComentarios: this.state.numeroComentarios + 1,
     })
   }
 
