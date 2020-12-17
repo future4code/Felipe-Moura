@@ -53,11 +53,13 @@ class App extends React.Component {
   render() {
     const listaDePost = this.state.informacoesPost.map((postagem) =>{
       return(
+        <div key={postagem.nomeUsuario}>
         <Post 
         nomeUsuario = {postagem.nomeUsuario}
         fotoUsuario = {postagem.fotoUsuario}
         fotoPost = {postagem.fotoPost}
         />
+        </div>
       )
     })
     
