@@ -5,7 +5,21 @@ import Etapa1 from './components/Etapa1'
 import Etapa2 from './components/Etapa2'
 import Etapa3 from './components/Etapa3'
 import Final from './components/Final'
+import styled from 'styled-components'
 
+const Container = styled.div`
+  width: 670px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-itens: center
+` 
+
+const Button = styled.button`
+  margin: 2vh auto;
+  padding: 2vh;
+  width: 50%;
+`
 
 export default class App extends React.Component{
 
@@ -14,10 +28,10 @@ export default class App extends React.Component{
   }
 
   proximaEtapa = () => {
-    let proxima = this.state.etapa
-    proxima++
+    let etapa = this.state.etapa
+    etapa++
 
-    this.setState({etapa: proxima})
+    this.setState({etapa: etapa})
   }
 
   
@@ -39,10 +53,10 @@ export default class App extends React.Component{
       }
     }
     return(
-      <div class='Container'>
+      <Container >
         {renderizaTela()}
-        <button onClick={this.proximaEtapa}>Proxima Etapa</button>
-      </div>
+        <Button onClick={this.proximaEtapa}>Proxima Etapa</Button>
+      </Container>
     )
   }
 }

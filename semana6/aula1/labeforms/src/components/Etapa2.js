@@ -1,16 +1,20 @@
 import React from 'react'
+import Titulo from './styles/Titulo'
+import {Inputs} from './styles/Inputs'
+import Question from './styles/Perguntas'
+import Conteudo from './styles/Conteudo'
 
 export default class Etapa2 extends React.Component{
     render(){
         return (
-            <div>
-                <h1>Etapa 2 - Informações de Ensino</h1>
-                <p>5. Qual Curso?</p>
-                <input type="text"/>
-                <p>6. Qual unidade do Cursos</p>
-                <input type="text" />
+            <Conteudo>
+                <Titulo>Etapa 2 - Informações de Ensino</Titulo>
+                <Question>5. Qual Curso?</Question>
+                <Inputs type="text"/>
+                <Question>6. Qual unidade do Cursos</Question>
+                <Inputs type="text" />
                 
-            </div>
+            </Conteudo>
         )
     }
 }

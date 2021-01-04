@@ -1,12 +1,16 @@
 import React from 'react'
+import Titulo from './styles/Titulo'
+
+import Question from './styles/Perguntas'
+import Conteudo from './styles/Conteudo'
 
 export default class Final extends React.Component{
     render(){
         return(
-            <div>
-                <h1>O Formulário Acabou</h1>
-                <p>Muito Obrigado por Participar! Entraremos em contato!</p>
-            </div>
+            <Conteudo>
+                <Titulo>O Formulário Acabou</Titulo>
+                <Question>Muito Obrigado por Participar! Entraremos em contato!</Question>
+            </Conteudo>
         )
     }
 }
