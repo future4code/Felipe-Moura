@@ -1,29 +1,50 @@
 
+import React from 'react'
 import './App.css';
+import Etapa1 from './components/Etapa1'
+import Etapa2 from './components/Etapa2'
+import Etapa3 from './components/Etapa3'
+import Final from './components/Final'
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Etapa 1 - Dados Gerais </h1>
-      <p>1. Qual o seu Nome?</p>
-      <input type="text>"/>
 
-      <p>2. Qual a sua idade?</p>
-      <input type="number"/>
+export default class App extends React.Component{
 
-      <p>3. Qual o seu Email?</p>
-      <input type="email"/>
+  state = {
+    etapa: 1
+  }
 
-      <p>4. Qual a sua escolaridade</p>
-      <select>
-        <option value="ensinoMedioCompleto">Ensino Medio Completo</option>
-        <option value="ensinoMedioIncompleto">Ensino Medio Incompleto</option>
-        <option value="ensinoSuperiorCompleto">Ensino Superior Completo</option>
-        <option value="ensinoSuperiorIncompleto">Ensino Superior Incompleto</option>
-      </select>
-      <button>Próxima Etapa</button>
-    </div>
-  );
+  proximaEtapa = () => {
+    let proxima = this.state.etapa
+    proxima++
+
+    this.setState({etapa: proxima})
+  }
+
+  
+
+
+  render(){
+    const renderizaTela = () =>{
+      switch(this.state.etapa){
+        case 1:
+          return <Etapa1/>
+        case 2:
+          return <Etapa2/>
+        case 3:
+          return <Etapa3/>
+        case 4:
+          return <Final/>
+        default:
+          return <Etapa1 />
+      }
+    }
+    return(
+      <div class='Container'>
+        {renderizaTela()}
+        <button onClick={this.proximaEtapa}>Proxima Etapa</button>
+      </div>
+    )
+  }
 }
 
-export default App;
+
