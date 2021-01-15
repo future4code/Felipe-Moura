@@ -18,7 +18,7 @@ export class Home extends React.Component{
             <div>
                 {this.state.mainPage ? <Main /> : <CreatePlaylist />}
 
-                <button onClick={this.handlePage}>Criar Playlist</button>
+                <button onClick={this.handlePage}>Começar</button>
 
             </div>
         )
