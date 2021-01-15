@@ -2,13 +2,15 @@ import React from "react";
 import { baseURL, axiosHeaders } from "../params";
 import axios from "axios";
 import { AddMusic } from "./AddMusic";
+import { ShowAllMusic } from "./ShowAllMusic";
 
 export class ViewPlaylist extends React.Component {
   state = {
     list: [],
     showAddMusic: false,
+    showMusics: false,
     playlistName: "",
-    playlistId: ""
+    playlistId: "",
   };
   componentDidMount() {
     this.getPlaylist();
@@ -48,13 +50,31 @@ export class ViewPlaylist extends React.Component {
         this.setState({
           showAddMusic: !this.state.showAddMusic,
           playlistName: name,
-          playlistId: id
+          playlistId: id,
         });
       })
       .catch((err) => {
         console.log(err);
       });
   };
+
+  showMusic = (name, id) => {
+    axios
+      .get(`${baseURL}/search?name=${name}`, axiosHeaders)
+      .then((res) => {
+        // console.log(res);
+        this.setState({
+          showMusics: !this.state.showMusics,
+          playlistName: name,
+          playlistId: id,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  
 
   render() {
     const playlist = this.state.list.map((playlist) => {
@@ -81,7 +101,7 @@ export class ViewPlaylist extends React.Component {
                 this.showMusic(playlist.name, playlist.id);
               }}
             >
-              Ver Musicas 
+              Ver Musicas
             </button>
           </li>
         </span>
@@ -90,8 +110,18 @@ export class ViewPlaylist extends React.Component {
     return (
       <div>
         <ul>{playlist}</ul>
-        {this.state.showAddMusic && <AddMusic addMusicToPlaylist={this.state.playlistName} playlistId={this.state.playlistId}/>}
-        
+        {this.state.showAddMusic && (
+          <AddMusic
+            addMusicToPlaylist={this.state.playlistName}
+            playlistId={this.state.playlistId}
+          />
+        )}
+        {this.state.showMusics && (
+          <ShowAllMusic
+            playlistName={this.state.playlistName}
+            playlistId={this.state.playlistId}
+          />
+        )}
       </div>
     );
   }

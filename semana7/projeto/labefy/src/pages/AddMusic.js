@@ -34,9 +34,10 @@ export class AddMusic extends React.Component{
             url: this.state.url
         }
         const idPlaylist = this.state.playlistId
+        
             axios.post(`${baseURL}/${idPlaylist}/tracks`, body, axiosHeaders)
             .then((res) =>{
-                console.log(res)
+                
                 alert('Musica Cadastrada com Sucesso')
                 this.setState({
                     music: '',
