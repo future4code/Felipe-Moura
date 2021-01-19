@@ -26,7 +26,7 @@ class App extends React.Component {
         "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users",
         {
           headers: {
-            Authorization: "Felipe-Moura-epps",
+            Authorization: "Felipe-Moura-Epps",
           },
         }
       )
@@ -72,6 +72,7 @@ class App extends React.Component {
         alert('Usuário Criado com Sucesso')
         // console.log(body)
         // console.log(this.state.userList)
+        this.userList()
       })
       .catch((err) => {
         console.log(err.message);
@@ -83,13 +84,23 @@ class App extends React.Component {
     this.setState({
       listUser: !this.state.listUser,
     });
+    this.userList()
     
   };
+
+  deleteUser = (e) =>{
+    console.log(e)
+
+  }
+
+
   render() {
     return (
       <Container>
         {this.state.listUser ? (
-          <Users showAllUsers={this.userList} />
+          <Users showAllUsers={this.state.userList}
+                deleteUser={this.deleteUser}
+          />
         ) : (
           <Login
             onChangeInputName={this.onChangeInputName}
@@ -97,7 +108,7 @@ class App extends React.Component {
             createUser={this.createUser}
           />
         )}
-        <button onClick={this.showUsers}>Mostrar usuários</button>
+        <button onClick={this.showUsers} >Mostrar usuários</button>
       </Container>
     );
   }

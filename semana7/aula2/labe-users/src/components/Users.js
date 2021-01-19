@@ -11,16 +11,18 @@ const Container = styled.div`
 
 class Users extends React.Component{
     render(){
-        const showAllUsers = this.props.showAllUsers.map((user)=>{
-            return user.name
+        const showAllUsers = this.props.showAllUsers.map((user) =>{
+            return(
+                <li key={user.id}><p>{user.name}</p> <button onClick={this.props.deleteUser}>X</button></li> 
+            )
         })
-
         
-        
-
         return(
             <Container>
                 <h1>Lista de usuários</h1>
+                <ul>
+                    {showAllUsers}
+                </ul>
             </Container>
         )
     }
