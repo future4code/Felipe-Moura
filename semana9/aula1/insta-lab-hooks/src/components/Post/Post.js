@@ -12,6 +12,8 @@ const Post = (props) => {
   const [curtido, setCurtido] = useState(false)
   const [numeroCurtidas, setnumeroCurtidas] = useState(0)
   const [iconeCurtida, setIconeCurtida] = useState(iconeCoracaoBranco)
+  const [comentario, setComentario] = useState(false)
+  const [caixaDeComentario, setSecaoComentario] = useState("")
 
   const onClickCurtida = () => {
     
@@ -32,6 +34,14 @@ const Post = (props) => {
 
 
   const onClickComentario = () => {
+    if(comentario){
+      setComentario(!comentario)
+      
+      setSecaoComentario("")
+    }else{
+      setComentario(!comentario)
+      setSecaoComentario(SecaoComentario)
+    }
   };
 
   const enviarComentario = (comentario) => {
@@ -59,7 +69,7 @@ const Post = (props) => {
           // valorContador={numeroComentarios}
         />
       </PostFooter>
-      {/* {caixaDeComentario} */}
+      {caixaDeComentario}
     </PostContainer>
   )
 }
