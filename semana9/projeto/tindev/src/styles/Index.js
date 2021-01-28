@@ -18,6 +18,7 @@ export const Container = styled.div`
     background-color: white;
     width: 400px;
     height: 600px;
+    box-sizing: border-box;
     
 
 `
