@@ -17,7 +17,8 @@ function App() {
       <MainContainer>
         <Container>
           <HeaderContainer>
-            TinDev
+            <div></div>
+            <p>TinDev</p>
             <button onClick={matchList}>Lista de Match</button>
           </HeaderContainer>
           <Main />
@@ -29,8 +30,9 @@ function App() {
       <MainContainer>
       <Container>
         <HeaderContainer>
-          TinDev
           <button onClick={matchList}>Voltar</button>
+          <p>TinDev</p>
+          <div></div>
         </HeaderContainer>
         <MatchList  returnHome={matchList}/>
       </Container>

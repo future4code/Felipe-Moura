@@ -19,6 +19,11 @@ export const Container = styled.div`
     width: 400px;
     height: 600px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    
+    /* justify-content: center; */
     
 
 `

@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
 export const ContainerMatchs = styled.div`
-  border: 1px solid blue;
-  height: 537px;
+ 
+  height: 80%;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 10px;
+  border: 1px solid lightgray;
  
 `;
 
@@ -22,7 +23,7 @@ export const UnorderedList = styled.ul`
   flex-direction: column;
   
   width: 100%;
-  height: 85%;
+  height: 80%;
   overflow-y: scroll;
   ::-webkit-scrollbar{
       display: none
@@ -46,5 +47,12 @@ export const PerfilImagem = styled.img`
     max-width: 75px;
 `
 export const InfoPerfil = styled.div`
-    padding-left: 20px
+    padding-left: 20px;
+`
+
+export const ButtonContainer = styled.div`
+    width: 350px;
+    text-align:center;
+    padding: 2px;
+    margin: 10px;
 `

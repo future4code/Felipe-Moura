@@ -1,21 +1,29 @@
 import styled from 'styled-components'
 
 export const Content = styled.div`
-    border: 1px solid blue;
-    height: 537px;
+    height: 80%;
     box-sizing: border-box;
     display:flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+   
 
 ` 
 
 export const ButtonContainer = styled.div`
-    border: 1px solid black;
-    width: 350px;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    padding: 2px;
-    margin: 10px;
+    justify-content: space-around;
+    height: 10%;
+    
+    
+`
+
+export const ButtonLike = styled.button`
+  background-color: #fff;
+  width: 60px;
+  height: 60px;
+  border: none;
+  outline: none;
+
 `

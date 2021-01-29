@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { ContainerMatchs, Title, UnorderedList, ListItem, PerfilImagem, InfoPerfil } from "./MatchsStyle";
+import { ContainerMatchs, Title, UnorderedList, ListItem, PerfilImagem, InfoPerfil,ButtonContainer } from "./MatchsStyle";
 import axios from "axios";
 import { clearMatchs, matchesURL } from "../../params";
+
 
 function MatchList(props) {
   const [matches, setMatches] = useState([]);
@@ -43,8 +44,10 @@ function MatchList(props) {
           );
         })}
       </UnorderedList>
+      <ButtonContainer>
 
       <button onClick={cleanMatchs}>Limpar todos</button>
+      </ButtonContainer>
     </ContainerMatchs>
   );
 }
