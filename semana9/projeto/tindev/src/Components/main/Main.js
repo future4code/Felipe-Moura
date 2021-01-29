@@ -29,7 +29,7 @@ function Main() {
     axios
       .post(choosePerson, body)
       .then((res) => {
-        console.log(res.data);
+        
       })
       .catch((err) => {
         console.log(err.message);
