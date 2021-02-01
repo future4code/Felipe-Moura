@@ -11,9 +11,9 @@ const Container = styled.div`
 
 class Users extends React.Component{
     render(){
-        const showAllUsers = this.props.showAllUsers.map((user) =>{
+        const showAllUsers = this.props.showAllUsers.map((user, index) =>{
             return(
-                <li key={user.id}><p>{user.name}</p> <button onClick={this.props.deleteUser}>X</button></li> 
+                <li><p key={user.id} onClick={this.props.deleteUser}>{user.name}</p> <button >X</button></li> 
             )
         })
         
