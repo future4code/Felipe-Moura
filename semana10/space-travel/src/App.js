@@ -1,18 +1,26 @@
+import Home from "./components/Home/Home";
+import  { createGlobalStyle } from 'styled-components'
+
+
+const GlobalStyled = createGlobalStyle`
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    font-family: ,
+  }
+
+`
 
 function App() {
   return (
-    <div>
-
-      <h1>Bem Vindo a LabeX</h1>
-      <p>
-        Sua próxima viagem espacial está aqui.
-      </p>
-
-      <h2>Quem é você?</h2>
-
-      <button>Viajante</button>
-      <button>Organizador</button>
-    </div>
+    <>
+      <GlobalStyled />
+    
+      <Home />
+    
+    </>
   );
 }
 
