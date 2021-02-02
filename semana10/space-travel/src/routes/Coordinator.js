@@ -15,3 +15,11 @@ export const goToLogin = (history) =>{
 export const goToDetails = (history) =>{
     history.push("/details")
 }
+
+export const goToApplication = (history) =>{
+    history.push("/application")
+}
+
+export const goToAdmListTrip = (history) =>{
+    history.push("/admlisttrip")
+}

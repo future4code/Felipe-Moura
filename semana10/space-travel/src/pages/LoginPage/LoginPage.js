@@ -1,6 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import { goToHome } from "../../routes/Coordinator";
+import { goToAdmListTrip, goToHome } from "../../routes/Coordinator";
 import { Container } from "../../styles/default";
 
 const LoginPage = () => {
@@ -13,7 +13,7 @@ const LoginPage = () => {
         <input placeholder="Digite seu login"></input>
         <label>senha</label>
         <input placeholder="Digite sua senha"></input>
-        <button>Entrar</button>
+        <button onClick={() => goToAdmListTrip(history)}>Entrar</button>
       </form>
     </Container>
   );
