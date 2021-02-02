@@ -1,6 +1,5 @@
 import Router from "./routes/Router";
-import  { createGlobalStyle } from 'styled-components'
-
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyled = createGlobalStyle`
   *{
@@ -10,15 +9,13 @@ const GlobalStyled = createGlobalStyle`
     outline: 0;
   }
 
-`
+`;
 
 function App() {
   return (
     <>
       <GlobalStyled />
-    
       <Router />
-    
     </>
   );
 }

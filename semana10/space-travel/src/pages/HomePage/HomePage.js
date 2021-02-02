@@ -1,18 +1,20 @@
 import React from "react";
-import { Container, Title , Paragraph, SubTitle} from "./HomePageStyles";
-import {ButtonDefault} from '../../components/Styles/default'
+import { Title, Paragraph, SubTitle } from "./HomePageStyles";
+import { ButtonDefault, Container } from "../../styles/default";
+import { useHistory } from "react-router-dom";
+import { goToListTrip } from "../../routes/Coordinator";
 
 const HomePage = () => {
+  const history = useHistory();
   return (
     <Container>
       <Title>Bem Vindo a LabeX</Title>
       <Paragraph> Sua próxima viagem espacial está aqui. </Paragraph>
-       <SubTitle>Quem é você?</SubTitle>
-     
+      <SubTitle>Quem é você?</SubTitle>
+
       <div>
-         <ButtonDefault>Viajante</ButtonDefault>
+        <ButtonDefault onClick={() => goToListTrip(history)}>Viajante</ButtonDefault>
         <ButtonDefault>Organizador</ButtonDefault>
-     
       </div>
     </Container>
   );
