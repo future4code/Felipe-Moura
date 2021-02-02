@@ -3,19 +3,21 @@ import { useHistory } from "react-router-dom";
 import { goToDetails, goToHome } from "../../routes/Coordinator";
 import {
   BackButton,
-    ButtonDefault,
-  Card,
   Container,
-  Content,
   ContentContainer,
   ContentHeader,
 } from "../../styles/default";
 
-import back from "../../images/left-arrow.svg";
+import { Content, Card } from "./ListTripPageStyles";
 
-import home from "../../images/home.svg";
+import back from "../../images/left-arrow.svg";
+import { useRequestData } from "../../hooks/useRequestData";
+
 
 const ListTripPage = () => {
+    const trips = useRequestData("https://us-central1-labenu-apis.cloudfunctions.net/labeX/darvas/trips", [])
+
+
   const history = useHistory();
   return (
     <Container>
@@ -23,18 +25,19 @@ const ListTripPage = () => {
         <ContentHeader>
           <BackButton onClick={() => goToHome(history)} src={back} alt="back" />
           <h1>Veja nossas opções de Viagens</h1>
-          <BackButton onClick={() => goToHome(history)} src={home} alt="back" />
+         
+          <div></div>
         </ContentHeader>
         <Content>
-          <Card>
-            Teste
-            <ButtonDefault onClick={() => goToDetails(history)}> Veja Mais</ButtonDefault>
-          </Card>
-          <Card>Teste</Card>
-          <Card>Teste</Card>
-          <Card>Teste</Card>
-          <Card>Teste</Card>
-          <Card>Teste</Card>
+            {trips.map((trip) =>{
+                return(
+                    <Card key={trip.id}>
+                        <h1>{trip.planet}</h1>
+                        <p>{trip.name}</p>
+                        <button onClick={() => goToDetails(history)}>Veja Mais</button>
+                    </Card>
+                )
+            })}
         </Content>
       </ContentContainer>
     </Container>

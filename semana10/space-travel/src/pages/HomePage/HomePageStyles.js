@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
 
+export const ContainerHome = styled.div`
+  height: 100vh;
+`
+
 export const Title = styled.h1`
   font-family: "Arial";
   padding: 5vw;
@@ -12,6 +16,6 @@ export const Paragraph = styled.p`
 `;
 
 export const SubTitle = styled.h2`
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Roboto", Helvetica, sans-serif;
   padding: 2.5vw;
 `;
