@@ -1,5 +1,5 @@
 export const goToListTrip = (history) =>{
-    console.log(history)
+ 
     history.push("/list")
 }
 
@@ -8,6 +8,10 @@ export const goToHome = (history) =>{
 }
 
 export const goToLogin = (history) =>{
-    console.log(history)
+   
     history.push("/login")
+}
+
+export const goToDetails = (history) =>{
+    history.push("/details")
 }
