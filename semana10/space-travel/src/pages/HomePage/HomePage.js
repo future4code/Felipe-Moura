@@ -2,10 +2,12 @@ import React from "react";
 import { Title, Paragraph, SubTitle } from "./HomePageStyles";
 import { ButtonDefault, Container } from "../../styles/default";
 import { useHistory } from "react-router-dom";
-import { goToListTrip } from "../../routes/Coordinator";
+import { goToListTrip, goToLogin } from "../../routes/Coordinator";
 
 const HomePage = () => {
   const history = useHistory();
+
+  
   return (
     <Container>
       <Title>Bem Vindo a LabeX</Title>
@@ -14,7 +16,7 @@ const HomePage = () => {
 
       <div>
         <ButtonDefault onClick={() => goToListTrip(history)}>Viajante</ButtonDefault>
-        <ButtonDefault>Organizador</ButtonDefault>
+        <ButtonDefault onClick={() => goToLogin(history)}>Organizador</ButtonDefault>
       </div>
     </Container>
   );
