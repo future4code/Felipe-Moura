@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.body`
   color: #fff;
   text-align: center;
   display: flex;
@@ -9,7 +9,9 @@ export const Container = styled.div`
   background-position:center;
   background-repeat: repeat;
   background-size: cover;
-
+  width: 100%;
+  /* height: 100vh; */
+  
 `;
 
 export const ContentContainer = styled.div`
@@ -17,6 +19,8 @@ export const ContentContainer = styled.div`
   margin: 20px;
   border-radius: 1vh;
   box-sizing: border-box;
+  min-height: 100%;
+
   
 `;
 export const ContentHeader = styled.div`

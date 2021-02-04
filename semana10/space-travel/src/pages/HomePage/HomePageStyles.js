@@ -6,12 +6,12 @@ export const ContainerHome = styled.div`
 `
 
 export const Title = styled.h1`
-  font-family: "Arial";
+  font-family: "Robot";
   padding: 5vw;
   font-size: 3rem;
 `;
 export const Paragraph = styled.p`
-  font-family: "Arial";
+  font-family: "Roboto";
   padding: 5vw;
 `;
 
