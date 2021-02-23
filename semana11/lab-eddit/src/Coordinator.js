@@ -1,3 +1,10 @@
 export const goToCreatePage = (history) => {
     history.push('/create')
 }
+
+export const goToFeedPage = (history) =>{
+    history.push('/feed')
+}
+export const goToHome = (history) =>{
+    history.push('/')
+}

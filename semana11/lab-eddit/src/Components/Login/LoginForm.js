@@ -1,39 +1,42 @@
-import React from 'react'
-import { useHistory } from 'react-router-dom'
-import useForm from '../../hooks/useForm'
-import Button from '../Forms/Button'
-import Input from '../Forms/Input'
-import {goToCreatePage} from '../../Coordinator'
-import axios from 'axios'
+import React, { useContext } from "react";
+import { Redirect, useHistory } from "react-router-dom";
+import useForm from "../../hooks/useForm";
+import Button from "../Forms/Button";
+import Input from "../Forms/Input";
+import { goToCreatePage, goToFeedPage } from "../../Coordinator";
+import axios from "axios";
+import { UserContext } from "../../UserContext";
 
 function LoginForm() {
-    const email = useForm()
-    const password = useForm()
-    const history = useHistory()
+  const email = useForm();
+  const password = useForm();
+  const history = useHistory();
+  const { userLogin, loading } = useContext(UserContext);
 
-    const handleSubmit = () => {
-        const body ={
-            email: email.value,
-            password: password.value
+  const handleSubmit = (event) => {
+    event.preventDefault();
 
-        }
-        axios.post("https://us-central1-labenu-apis.cloudfunctions.net/labEddit/login", body).then(res =>{
-            console.log(res)
-        }).catch(err =>{
-            console.log(err)
-        })
+    const body = {
+      email: email.value,
+      password: password.value,
+    };
+    if (email.validate() && password.validate()) {
+      userLogin(body);
+      
     }
+  };
 
-
-    return (
-        <div>
-            <h1>Login</h1>
-            <Input label="Email" type="email" name="email"{...email} />
-            <Input label="senha" type="password" name="password" {...password} />
-            <Button onClick={handleSubmit}>Entrar</Button>
-            <Button onClick={() => goToCreatePage(history)}>Cadastra-se</Button>
-        </div>
-    )
+  return (
+    <div>
+      <form onSubmit={handleSubmit}>
+        <h1>Login</h1>
+        <Input label="Email" type="email" name="email" {...email} />
+        <Input label="senha" type="password" name="password" {...password} />
+        {loading ? <Button>Carregando...</Button> : <Button>Entrar</Button>}
+        <Button onClick={() => goToCreatePage(history)}>Cadastra-se</Button>
+      </form>
+    </div>
+  );
 }
 
-export default LoginForm
+export default LoginForm;
