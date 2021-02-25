@@ -6,6 +6,7 @@ import LoginCreate from "./Components/Login/LoginCreate";
 import LoginForm from "./Components/Login/LoginForm";
 import Feed from "./Feed/Feed";
 import { UserStorage } from "./UserContext";
+import ProtectedRoute from "./Helpers/ProtectedRoute";
 
 function Router() {
   return (

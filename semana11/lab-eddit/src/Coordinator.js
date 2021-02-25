@@ -8,3 +8,7 @@ export const goToFeedPage = (history) =>{
 export const goToHome = (history) =>{
     history.push('/')
 }
+
+export const goToLoginPage = (history)=>{
+    history.push('/login')
+}

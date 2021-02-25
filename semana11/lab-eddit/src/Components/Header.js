@@ -21,13 +21,14 @@ const Nav = styled.nav`
 `;
 
 function Header() {
-  const { data } = useContext(UserContext);
+  const { data, userLogout } = useContext(UserContext);
   return (
     <Headers>
       <Nav>
         <Link to="/">Home</Link>
         {data ? (
-          <Link to="/feed">{data.username}</Link>
+          <Link to="/feed">{data.username}
+          <button onClick={userLogout}>Sair</button></Link>
         ) : (
           <Link to="/login">Login/Criar</Link>
         )}
