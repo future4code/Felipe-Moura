@@ -9,6 +9,7 @@ export const UserStorage = ({ children }) => {
   const [data, setData] = useState(null);
   const [posts, setPosts] = useState([]);
   const [postsDetail, setPostDetail] = useState({});
+  const [votos, setVotos] = useState('')
   const [login, setLogin] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -104,6 +105,8 @@ export const UserStorage = ({ children }) => {
         console.log(err);
       });
   }
+
+ 
 
   // async function autoLogin() {
 

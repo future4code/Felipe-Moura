@@ -14,11 +14,11 @@ const PostFeed = ({
   votesCount,
   id,
 }) => {
+
   const [votos, setVotos] = useState("");
   const history = useHistory();
 
   const handleClick = (id) => {
-    console.log(id);
     const body = {
       direction: 1,
     };
@@ -46,7 +46,9 @@ const PostFeed = ({
     goToPostDetailPage(history,id);
   };
 
-  useEffect(() => {}, [votos]);
+  useEffect(() => {
+
+  }, [votos]);
 
   return (
     <ContainerPost>
@@ -54,10 +56,10 @@ const PostFeed = ({
       <p>{text}</p>
       <p>Autor: {username}</p>
       <p>Voto: {userVoteDirection}</p>
+      <p>{votos}</p>
       <ButtonLike onClick={() => handleClick(id)}>
         <Like />
       </ButtonLike>
-      <p>{votos}</p>
       <Button onClick={() => handlePostDetail(id)}>Veja mais</Button>
     </ContainerPost>
   );
