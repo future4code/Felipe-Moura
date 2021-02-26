@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { UserContext } from "../UserContext";
@@ -20,8 +20,10 @@ const Nav = styled.nav`
   padding: 0.5rem 2rem;
 `;
 
+
 function Header() {
-  const { data, userLogout } = useContext(UserContext);
+  const { data, userLogout, autoLogin } = useContext(UserContext);
+  
   return (
     <Headers>
       <Nav>

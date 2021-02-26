@@ -1,10 +1,11 @@
 import React from 'react'
+import { ButtonStyle } from './ButtonStyles'
 
 function Button({children, ...props}) {
     return (
-        <button {...props}>
+        <ButtonStyle {...props}>
             {children}
-        </button>
+        </ButtonStyle>
     )
 }
 

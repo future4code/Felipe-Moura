@@ -1,10 +1,11 @@
 import React from 'react'
+import { LabelInput, InputsForm } from './InputsStyles'
 
 function Input({label, type, name, value, onChange, error, onBlur}) {
     return (
         <div>
-            <label htmlFor={name}>{label}</label>
-            <input type={type} id={name} name={name} onChange={onChange} value={value} />
+            <LabelInput htmlFor={name}>{label}</LabelInput>
+            <InputsForm type={type} id={name} name={name} onChange={onChange} value={value} />
             
         </div>
     )

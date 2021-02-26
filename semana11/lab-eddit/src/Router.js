@@ -6,7 +6,7 @@ import LoginCreate from "./Components/Login/LoginCreate";
 import LoginForm from "./Components/Login/LoginForm";
 import Feed from "./Feed/Feed";
 import { UserStorage } from "./UserContext";
-import ProtectedRoute from "./Helpers/ProtectedRoute";
+import PostDetail from "./Components/Posts/PostDetail";
 
 function Router() {
   return (
@@ -26,6 +26,9 @@ function Router() {
             </Route>
             <Route exact path="/feed">
               <Feed />
+            </Route>
+            <Route path="/postDetail/:id">
+              <PostDetail />
             </Route>
           </Switch>
         </UserStorage>

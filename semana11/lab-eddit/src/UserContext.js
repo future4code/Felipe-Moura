@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useCallback, useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
+import { Link, Redirect, useHistory } from "react-router-dom";
 import { goToFeedPage, goToLoginPage } from "./Coordinator";
 
 export const UserContext = React.createContext();
@@ -8,19 +8,22 @@ export const UserContext = React.createContext();
 export const UserStorage = ({ children }) => {
   const [data, setData] = useState(null);
   const [posts, setPosts] = useState([]);
+  const [postsDetail, setPostDetail] = useState({});
   const [login, setLogin] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [token, setToken] = useState("");
   const history = useHistory();
 
   const userLogout = useCallback(
     async function () {
       setData(null);
-      setError(null);
-      setLoading(false);
+      setPosts([]);
       setLogin(false);
-      window.localStorage.removeItem("token");
-      goToLoginPage(history);
+      setLoading(false);
+      setError(null);
+      setToken(window.localStorage.removeItem("token"));
+      <Link to="/login" />;
     },
     [history]
   );
@@ -36,9 +39,25 @@ export const UserStorage = ({ children }) => {
         }
       )
       .then((res) => {
-        console.log(res)
         setPosts(res.data.posts);
         // setLogin(true);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+  async function getPostDetail(token, id) {
+    await axios
+      .get(
+        `https://us-central1-labenu-apis.cloudfunctions.net/labEddit/posts/${id}`,
+        {
+          headers: {
+            Authorization: token,
+          },
+        }
+      )
+      .then((res) => {
+        setPostDetail(res.data.post);
       })
       .catch((err) => {
         console.log(err);
@@ -55,7 +74,7 @@ export const UserStorage = ({ children }) => {
       )
       .then((res) => {
         console.log(res);
-        window.localStorage.setItem("token", res.data.token);
+        setToken(window.localStorage.setItem("token", res.data.token));
         setLoading(false);
         setLogin(true);
         setData(res.data.user);
@@ -67,21 +86,52 @@ export const UserStorage = ({ children }) => {
       });
   }
 
-  async function autoLogin() {
-    const token = window.localStorage.getItem("token");
-    if (token) {
-      goToFeedPage(history);
-    } else {
-      goToLoginPage(history);
-    }
+  async function createComment(body, id, token) {
+    await axios
+      .post(
+        `https://us-central1-labenu-apis.cloudfunctions.net/labEddit/posts/${id}/comment`,
+        body,
+        {
+          headers: {
+            Authorization: token
+          }
+        }
+      )
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }
-  useEffect(() =>{
-    autoLogin()
-  },[])
-  
+
+  // async function autoLogin() {
+
+  //   if (data) {
+  //     goToFeedPage(history);
+  //   } else {
+  //     goToLoginPage(history);
+  //   }
+  // }
+
+  // useEffect(() =>{
+  //   autoLogin()
+  // },[])
+
   return (
     <UserContext.Provider
-      value={{ userLogin, userLogout, autoLogin, loading, data, login, posts }}
+      value={{
+        userLogin,
+        userLogout,
+        getPostDetail,
+        createComment,
+        postsDetail,
+        loading,
+        data,
+        login,
+        posts,
+        token,
+      }}
     >
       {children}
     </UserContext.Provider>

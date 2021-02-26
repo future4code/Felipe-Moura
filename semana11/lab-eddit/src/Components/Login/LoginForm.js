@@ -6,6 +6,7 @@ import Input from "../Forms/Input";
 import { goToCreatePage, goToFeedPage } from "../../Coordinator";
 import axios from "axios";
 import { UserContext } from "../../UserContext";
+import { LoginContainer, LoginForms } from "./LoginFormStyle";
 
 function LoginForm() {
   const email = useForm();
@@ -27,15 +28,18 @@ function LoginForm() {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <LoginContainer>
+      <LoginForms onSubmit={handleSubmit}>
         <h1>Login</h1>
         <Input label="Email" type="email" name="email" {...email} />
         <Input label="senha" type="password" name="password" {...password} />
+        <div>
         {loading ? <Button>Carregando...</Button> : <Button>Entrar</Button>}
         <Button onClick={() => goToCreatePage(history)}>Cadastra-se</Button>
-      </form>
-    </div>
+
+        </div>
+      </LoginForms>
+    </LoginContainer>
   );
 }
 
