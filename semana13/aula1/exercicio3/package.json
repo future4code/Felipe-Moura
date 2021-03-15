@@ -1,0 +1,17 @@
+{
+  "name": "lista-tarefas",
+  "version": "1.0.0",
+  "description": "Lista de tarefas a serem executadas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "labenu",
+    "epps",
+    "node"
+  ],
+  "author": "Felipe-Moura",
+  "license": "MIT"
+}
