@@ -1,0 +1,17 @@
+{
+  "name": "exercicio1",
+  "version": "1.0.0",
+  "description": "Fazer uma aplicação node que recebe alguns parâmetros e retornar uma frase",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "clear && node index.js"
+  },
+  "keywords": [
+    "labenu",
+    "node",
+    "epps"
+  ],
+  "author": "Felipe-Moura",
+  "license": "MIT"
+}
