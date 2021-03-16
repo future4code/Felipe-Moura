@@ -1,0 +1,17 @@
+{
+  "name": "operacoes-basicas",
+  "version": "1.0.0",
+  "description": "Programa para a realizaçao das quatro operaçoes basicas de matematica",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "clear && node index.js"
+  },
+  "keywords": [
+    "labenu",
+    "node",
+    "epps"
+  ],
+  "author": "Felipe-Moura",
+  "license": "MIT"
+}
