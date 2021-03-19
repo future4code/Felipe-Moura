@@ -12,7 +12,7 @@ app.get("/users", (req: Request, res: Response) => {
 
   try {
     const myUsers = users;
-    res.status(200).send(myUsers)
+    res.status(200).send(myUsers);
   } catch (error) {
     res.status(404).send(error.message);
   }
@@ -87,21 +87,30 @@ app.put("/users", (req: Request, res: Response) => {
   }
 });
 
-
 //Exercício 5
-app.put("/users/:id", (req: Request, res: Response) =>{
-    try {
-        const id:number = Number(req.params.id)
-        const userAlterado = users
-        userAlterado.find((us) =>{
-            return 
-        })
+app.put("/users/:id", (req: Request, res: Response) => {
+  try {
+    const id: number = Number(req.params.id);
+    let user = users.find((u) => {
+      return u.id === id;
+    });
 
-    } catch (error) {
-        res.status(400).send('Inválido')
-        
-    }
-})
+    const reqBody: user = {
+      id: req.body.id,
+      name: req.body.name,
+      email: req.body.email,
+      type: UserType.ADMIN,
+      age: req.body.age,
+    };
+
+    user = reqBody
+
+    res.status(200).send(user);
+  } catch (error) {
+    res.status(400).send("Inválido");
+  }
+});
+
 const server = app.listen(process.env.PORT || 3003, () => {
   if (server) {
     const address = server.address() as AddressInfo;
