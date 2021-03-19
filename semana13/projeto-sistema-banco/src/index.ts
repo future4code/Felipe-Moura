@@ -11,7 +11,6 @@ app.post("/create", (req: Request, res: Response) => {
   let errorCode: number = 400;
   const inicialBalance: number = 0;
 
-
   try {
     const reqBody: createUser = {
       id: allUsers.length + 1,
@@ -19,14 +18,56 @@ app.post("/create", (req: Request, res: Response) => {
       age: req.body.age,
       cpf: req.body.cpf,
       balance: inicialBalance,
-      extract: []
+      extract: [],
+    };
+
+    const ageUSer = req.body.age;
+    function calculaIdade(dataNasc: any) {
+      let dataAtual = new Date();
+      let anoAtual = dataAtual.getFullYear();
+      let anoNascParts = dataNasc.split("/");
+      let diaNasc = anoNascParts[0];
+      let mesNasc = anoNascParts[1];
+      let anoNasc = anoNascParts[2];
+      let idade = anoAtual - anoNasc;
+      let mesAtual = dataAtual.getMonth() + 1;
+      //Se mes atual for menor que o nascimento, nao fez aniversario ainda;
+      if (mesAtual < mesNasc) {
+        idade--;
+      } else {
+        //Se estiver no mes do nascimento, verificar o dia
+        if (mesAtual == mesNasc) {
+          if (new Date().getDate() < diaNasc) {
+            //Se a data atual for menor que o dia de nascimento ele ainda nao fez aniversario
+            idade--;
+          }
+        }
+      }
+      return idade;
     }
-   
+
+    if (calculaIdade(ageUSer) < 18) {
+      throw new Error("Para abrir uma conta é necessário ter 18 anos ou mais");
+    }
+
+    // const userAger = () =>{
+    //     let ageUser = r
+    // }
 
     allUsers.push(reqBody);
     res.status(201).send(allUsers);
   } catch (error) {
-    res.status(400).send(error);
+    res.status(400).send(error.message);
+  }
+});
+
+//Pegando users
+app.get("/users", (req: Request, res: Response) => {
+  try {
+    const myUsers = allUsers;
+    res.status(200).send(myUsers);
+  } catch (error) {
+    res.status(404).send(error.message);
   }
 });
 

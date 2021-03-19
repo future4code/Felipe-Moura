@@ -1,17 +1,16 @@
 export type createUser = {
   id: number;
   name: string;
-  age: number;
+  age: string;
   cpf: string;
   balance: number;
-  extract: extract[]
+  extract: extract[];
 };
 
 export type extract = {
   description: string;
   value: number;
+  data: number;
 };
-
-
 
 export const allUsers: createUser[] = [];
