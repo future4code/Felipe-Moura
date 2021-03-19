@@ -1,9 +1,10 @@
-export type user = {
+export type createUser = {
   id: number;
   name: string;
   age: number;
+  cpf: string;
   balance: number;
-  extract: extract[];
+  extract: extract[]
 };
 
 export type extract = {
@@ -11,4 +12,6 @@ export type extract = {
   value: number;
 };
 
-export const users: user[] = [];
+
+
+export const allUsers: createUser[] = [];
