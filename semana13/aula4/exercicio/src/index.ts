@@ -110,6 +110,28 @@ app.put("/users/:id", (req: Request, res: Response) => {
     res.status(400).send("Inválido");
   }
 });
+app.patch("/users/:id", (req: Request, res: Response) => {
+  try {
+    const id: number = Number(req.params.id);
+    let user = users.find((u) => {
+      return u.id === id;
+    });
+
+    const reqBody: user = {
+      id: req.body.id,
+      name: req.body.name,
+      email: req.body.email,
+      type: UserType.ADMIN,
+      age: req.body.age,
+    };
+
+    user = reqBody
+
+    res.status(200).send(user);
+  } catch (error) {
+    res.status(400).send("Inválido");
+  }
+});
 
 const server = app.listen(process.env.PORT || 3003, () => {
   if (server) {
