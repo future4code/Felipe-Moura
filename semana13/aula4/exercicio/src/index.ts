@@ -103,13 +103,15 @@ app.put("/users/:id", (req: Request, res: Response) => {
       age: req.body.age,
     };
 
-    user = reqBody
+    user = reqBody;
 
     res.status(200).send(user);
   } catch (error) {
     res.status(400).send("Inválido");
   }
 });
+
+//Exerçío 6
 app.patch("/users/:id", (req: Request, res: Response) => {
   try {
     const id: number = Number(req.params.id);
@@ -125,11 +127,25 @@ app.patch("/users/:id", (req: Request, res: Response) => {
       age: req.body.age,
     };
 
-    user = reqBody
+    user = reqBody;
 
     res.status(200).send(user);
   } catch (error) {
     res.status(400).send("Inválido");
+  }
+});
+
+//Exercicio 7
+app.delete("/users/:id", (req: Request, res: Response) => {
+  try {
+    // const id: number = Number(req.params.id);
+    users.pop()
+
+    
+
+    res.status(200).send(users);
+  } catch (error) {
+    res.status(400).send("USARARIO DELETADO");
   }
 });
 
