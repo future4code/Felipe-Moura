@@ -71,18 +71,71 @@ ALTER TABLE Filmes
 DROP COLUMN rating
 
 ```
+
 <b>E) </b>
+
 ```
 DELETE FROM Filmes
 WHERE id = "001"
 ```
-Error: 
+
+Error:
+
 ```
 Error Code: 1451. Cannot delete or update a parent row: a foreign key constraint fails (`epps-felipe-moura`.`Rating`, CONSTRAINT `Rating_ibfk_1` FOREIGN KEY (`movie_id`) REFERENCES `Filmes` (`id`))
 
 ```
-Esse erro dis que existe um relação entre tabelas e por isso não possível apagar
----
-### Exercício 1
 
-<b>a)</b> A chave estrangeira é o que faz a ligação entre os tabelas do banco de dados. O tornando assim relacional.<br>
+## Esse erro dis que existe um relação entre tabelas e por isso não possível apagar
+
+### Exercício 2
+
+<b>a)</b> Esse é um tabela que relaciona o elenco de cada um dos filmes.<br>
+<b>b)</b>
+
+```
+INSERT INTO MovieCast(movie_id , actor_id)
+VALUES(
+	"001",
+    "002"
+);
+
+INSERT INTO MovieCast(movie_id , actor_id)
+VALUES(
+	"001",
+    "001"
+);
+
+INSERT INTO MovieCast(movie_id , actor_id)
+VALUES(
+	"002",
+    "005"
+);
+INSERT INTO MovieCast(movie_id , actor_id)
+VALUES(
+	"002",
+    "006"
+);
+INSERT INTO MovieCast(movie_id , actor_id)
+VALUES(
+	"003",
+    "007"
+);
+INSERT INTO MovieCast(movie_id , actor_id)
+VALUES(
+	"003",
+    "008"
+);
+```
+<b>C) </b>
+
+```
+Error Code: 1452. Cannot add or update a child row: a foreign key constraint fails (`epps-felipe-moura`.`MovieCast`, CONSTRAINT `MovieCast_ibfk_1` FOREIGN KEY (`movie_id`) REFERENCES `Filmes` (`id`))
+```
+Diz que não encontrou conseguiu fazer a referencia junto com movie_id
+
+<b>D)</b>
+```
+Error Code: 1175. You are using safe update mode and you tried to update a table without a WHERE that uses a KEY column.  To disable safe mode, toggle the option in Preferences -> SQL Editor and reconnect.
+```
+Está dizendo que não pode fazer esses update pois existe uma relação
