@@ -127,25 +127,54 @@ VALUES(
     "008"
 );
 ```
+
 <b>C) </b>
 
 ```
 Error Code: 1452. Cannot add or update a child row: a foreign key constraint fails (`epps-felipe-moura`.`MovieCast`, CONSTRAINT `MovieCast_ibfk_1` FOREIGN KEY (`movie_id`) REFERENCES `Filmes` (`id`))
 ```
+
 Diz que não encontrou conseguiu fazer a referencia junto com movie_id
 
 <b>D)</b>
+
 ```
 Error Code: 1175. You are using safe update mode and you tried to update a table without a WHERE that uses a KEY column.  To disable safe mode, toggle the option in Preferences -> SQL Editor and reconnect.
 ```
+
 Está dizendo que não pode fazer esses update pois existe uma relação
 
 ---
 
 ### Exercício 3
-<b>a) </b> Retorna todos os itens que são relacionados nas duas tabelas. Essa relação é feita porque essas tabelas são relacionados por causa da FOREIGN KEY
+
+<b>a) </b> Retorna todos os itens que são relacionados nas duas tabelas. Essa relação é feita porque essas tabelas são relacionados por causa da FOREIGN KEY<BR>
 <b>B) </b>
+
 ```
-SELECT Filmes.id, Filmes.name, Rating.rate as movie_id FROM Filmes 
+SELECT Filmes.id, Filmes.name, Rating.rate as movie_id FROM Filmes
 INNER JOIN Rating ON Filmes.id = Rating.movie_id
+```
+
+### Exercício 4
+
+<b>A) </b>
+
+```
+SELECT Filmes.id, Filmes.name, Rating.rate, Rating.comment as movie_id FROM Filmes
+LEFT JOIN Rating ON Filmes.id = Rating.movie_id
+```
+
+<b>B)</b>
+
+```
+SELECT Filmes.id as movie_id, Filmes.name, MovieCast.actor_id FROM Filmes
+RIGHT JOIN MovieCast ON MovieCast.movie_id = Filmes.id
+```
+<b>B)</b>
+
+```
+SELECT AVG(Rating.rate), Filmes.id, Filmes.name FROM Filmes
+LEFT JOIN Rating on Filmes.id = Rating.movie_id
+GROUP BY (Filmes.id)
 ```
