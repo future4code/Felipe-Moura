@@ -139,3 +139,13 @@ Diz que não encontrou conseguiu fazer a referencia junto com movie_id
 Error Code: 1175. You are using safe update mode and you tried to update a table without a WHERE that uses a KEY column.  To disable safe mode, toggle the option in Preferences -> SQL Editor and reconnect.
 ```
 Está dizendo que não pode fazer esses update pois existe uma relação
+
+---
+
+### Exercício 3
+<b>a) </b> Retorna todos os itens que são relacionados nas duas tabelas. Essa relação é feita porque essas tabelas são relacionados por causa da FOREIGN KEY
+<b>B) </b>
+```
+SELECT Filmes.id, Filmes.name, Rating.rate as movie_id FROM Filmes 
+INNER JOIN Rating ON Filmes.id = Rating.movie_id
+```
