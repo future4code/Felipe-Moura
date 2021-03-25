@@ -178,3 +178,16 @@ SELECT AVG(Rating.rate), Filmes.id, Filmes.name FROM Filmes
 LEFT JOIN Rating on Filmes.id = Rating.movie_id
 GROUP BY (Filmes.id)
 ```
+### Exercício 5
+
+<b>A) </b>Essa Query pega todo os filmes, Com base no id do filme cria uma relação com a tabela de MovieCast que contém os actores e seus respectivos filmes. E por ultimo junto os actores que fazem parte do filme.
+
+<b>B)</b>
+```
+SELECT Filmes.id as movie_id, Filmes.name, Actor.id as actor_id, Actor.name FROM Filmes
+LEFT JOIN MovieCast ON Filmes.id = MovieCast.movie_id
+JOIN Actor on Actor.id = MovieCast.actor_id;
+```
+
+<b>C)</b>
+Não faço ideia porque não rodou
