@@ -7,6 +7,7 @@ import user from "./endpoints/user";
 import getUser from "./endpoints/getUser";
 import editUser from "./endpoints/editUser";
 import task from "./endpoints/task";
+import getTask from "./endpoints/getTask";
 
 const app = express();
 app.use(express.json());
@@ -33,6 +34,8 @@ app.get('/user/:id', getUser)
 app.put('/user/:id', editUser)
 
 app.post('/task', task)
+
+app.get('/task/:id', getTask)
 
 const server = app.listen(process.env.PORT || 3003, ()=>{
     if(server){
