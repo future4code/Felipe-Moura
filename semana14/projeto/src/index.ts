@@ -4,8 +4,9 @@ import { AddressInfo } from "net";
 import knex from "knex";
 import dotenv from 'dotenv'
 import user from "./endpoints/user";
-const app = express();
+import getUser from "./endpoints/getUser";
 
+const app = express();
 app.use(express.json());
 app.use(cors());
 
@@ -24,6 +25,8 @@ export const connection = knex({
 
 
 app.post('/user', user)
+
+app.get('/user/:id', getUser)
 
 const server = app.listen(process.env.PORT || 3003, ()=>{
     if(server){
