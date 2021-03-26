@@ -5,6 +5,7 @@ import knex from "knex";
 import dotenv from 'dotenv'
 import user from "./endpoints/user";
 import getUser from "./endpoints/getUser";
+import editUser from "./endpoints/editUser";
 
 const app = express();
 app.use(express.json());
@@ -27,6 +28,8 @@ export const connection = knex({
 app.post('/user', user)
 
 app.get('/user/:id', getUser)
+
+app.put('/user/:id', editUser)
 
 const server = app.listen(process.env.PORT || 3003, ()=>{
     if(server){
