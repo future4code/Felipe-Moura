@@ -9,7 +9,7 @@ const getTask = async (req: Request, res: Response) => {
     };
 
     const results = await connection.select().table("TASKLIST").where("id", id.id);
-    console.log(results)
+    console.log(results[0].limitDate)
     res.status(200).send(results)
   } catch (error) {
     console.log("Sorry! Task don't found");
