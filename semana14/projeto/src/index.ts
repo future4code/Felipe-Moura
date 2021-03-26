@@ -6,6 +6,7 @@ import dotenv from 'dotenv'
 import user from "./endpoints/user";
 import getUser from "./endpoints/getUser";
 import editUser from "./endpoints/editUser";
+import task from "./endpoints/task";
 
 const app = express();
 app.use(express.json());
@@ -30,6 +31,8 @@ app.post('/user', user)
 app.get('/user/:id', getUser)
 
 app.put('/user/:id', editUser)
+
+app.post('/task', task)
 
 const server = app.listen(process.env.PORT || 3003, ()=>{
     if(server){

@@ -15,3 +15,12 @@ export type editUser = {
   nickname?: string;
   email?: string;
 };
+
+export type task = {
+  id: number;
+  task: string;
+  description: string;
+  creatorId: string;
+  responsibleId: string;
+  limitDate: string;
+};
