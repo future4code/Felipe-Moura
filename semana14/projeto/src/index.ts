@@ -3,6 +3,7 @@ import cors from "cors";
 import { AddressInfo } from "net";
 import knex from "knex";
 import dotenv from 'dotenv'
+import user from "./endpoints/user";
 const app = express();
 
 app.use(express.json());
@@ -20,6 +21,9 @@ export const connection = knex({
         database: process.env.DB_NAME
     }
 })
+
+
+app.post('/user', user)
 
 const server = app.listen(process.env.PORT || 3003, ()=>{
     if(server){
