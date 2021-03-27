@@ -1,0 +1,31 @@
+GET http://localhost:3003/actor/Moacyr
+
+###
+
+GET http://localhost:3003/actor/gender/female
+
+### 
+
+GET http://localhost:3003
+
+###
+
+POST http://localhost:3003/actor
+Content-Type: application/json
+
+{
+    "id": "485451454",
+    "name": "michelle rodriguez",
+    "gender": "female",
+    "dateOfBirth": "1978-06-12",
+    "salary": 1750000
+}
+
+### 
+
+PUT http://localhost:3003/actor/003
+Content-Type: application/json
+
+{
+    "salary": 610000
+}
