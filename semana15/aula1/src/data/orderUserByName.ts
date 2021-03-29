@@ -6,5 +6,5 @@ export default async function orderByName(orderBy:string,orderType:string) {
         SELECT * FROM aula48_exercicio ORDER BY ${orderBy} ${orderType}
     `)
     console.log(result)
-    return result[0]
+    return result
 }
