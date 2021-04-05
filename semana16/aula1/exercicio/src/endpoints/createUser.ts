@@ -1,6 +1,8 @@
 import {Request, Response} from 'express'
 import { connection, userTable } from '../connection'
 import create from '../data/createNewUser'
+import getUserByEmail from '../data/getUserByEmail'
+import searchEmail from '../data/searchEmail'
 import { generateToken } from '../services/authenticator'
 import generateId from '../services/generateId'
 import { types } from '../services/validade'
@@ -20,16 +22,27 @@ export const createUser = async(req:Request, res: Response): Promise<void> =>{
             throw new Error (types.email.message)
         }
         if(!password){
+
             types.password.regex.test(password)
             throw new Error(types.password.message)
         }
 
-        const [user] = await connection(userTable).where({email})
-
-        if(user){
+        //Procurando usuários cadastrados com esse email
+        
+    
+    
+        //Não permitindo cadastro duplicado
+        const [user] = await searchEmail(email)
+        if(!user){
+            if(user.email){
+                const [userData] = await getUserByEmail(user.email)
+                console.log(userData)
+                res.status(200).send(userData)
+            }
             res.statusCode = 400
             throw new Error ('Email já cadastrado')
         }
+
 
         const id: string = generateId()
 
