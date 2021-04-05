@@ -6,4 +6,3 @@ const generateId = ():string =>{
 }
 export default generateId
 
-console.log('Generate ID', generateId())
