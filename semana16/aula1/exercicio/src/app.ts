@@ -15,3 +15,5 @@ const server = app.listen(process.env.PORT || 3003, () =>{
         console.log(`Failure upon starting server`)
     }
 })
+
+export default app

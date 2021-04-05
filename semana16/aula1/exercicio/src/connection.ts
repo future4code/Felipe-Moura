@@ -3,6 +3,8 @@ import dotenv from 'dotenv'
 
 dotenv.config()
 
+export const userTable = 'User_semana16'
+
 export const connection = knex({
     client: "mysql",
     connection:{
