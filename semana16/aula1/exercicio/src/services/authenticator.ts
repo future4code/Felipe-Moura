@@ -8,11 +8,11 @@ const expiresIn = "10min";
 
 export const generateToken = (payload: authenticationData): string =>{
     return jwt.sign(
-            payload,
-            process.env.JWT_KEY!,
-            {
-                expiresIn
-            }
+        payload,
+        process.env.JWT_KEY!,
+        {
+            expiresIn
+        }
     )
 }
 
