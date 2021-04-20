@@ -74,7 +74,6 @@ describe("Testing validade empty proprieties", () => {
     //Espero que a resposta da função seja false
     expect(result).toBe(true)
   })
-
   test("Teste Attack Method and Vitality", () => {
     //Função de "mentira" para realizar os testes
     const validatorMock = jest.fn(() => {
